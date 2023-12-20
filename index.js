@@ -3,11 +3,42 @@ require('dotenv').config()
 const express=require("express");
 const app = express();
 
-const dupdata = {
-    "name":"prince",
-    "rooll":"2021ug2008",
-    "id":15
-}
+const dupdata = 
+[
+	{
+		color: "red",
+		value: "#f00"
+	},
+    // {
+    //     "name":"prince",
+    //     "rooll":"2021ug2008",
+    //     "id":15
+    // },
+	{
+		color: "green",
+		value: "#0f0"
+	},
+	{
+		color: "blue",
+		value: "#00f"
+	},
+	{
+		color: "cyan",
+		value: "#0ff"
+	},
+	{
+		color: "magenta",
+		value: "#f0f"
+	},
+	{
+		color: "yellow",
+		value: "#ff0"
+	},
+	{
+		color: "black",
+		value: "#000"
+	}
+]
 
 app.get('/', (req,res) => {
      res.send('defining homepage')
@@ -34,7 +65,7 @@ app.get('/aboutyou', (req,res) => {
       })
 })
 
-app.get('/github',(req,res)=>{
+app.get('/api/github',(req,res)=>{
     res.json(dupdata)
 
 })
